@@ -1,2 +1,2 @@
 # chess
-Making a chess ais
+Making a chess ai
