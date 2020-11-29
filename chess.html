@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHESS 3 Yay</title>
+    <style>
+        #canvas{
+            border: 1px solid black;
+        }
+
+        .image{
+            display: none;
+        }
+
+        #start{
+            position: absolute;
+            width: 180px;
+            height: 70px;
+
+            text-align: center;
+            padding: 10px;
+            font-size: 50px;
+
+            background-color: bisque;
+            border: 1px solid black;
+
+            top: 20px;
+            left: 600px;
+
+        }
+
+        #color{
+            position: absolute;
+            width: 180px;
+            height: 70px;
+
+            text-align: center;
+            padding: 10px;
+            font-size: 30px;
+
+            background-color: rgb(247, 136, 0);
+            border: 1px solid black;
+
+            top: 140px;
+            left: 600px;
+        }
+
+        #moves{
+            position: absolute;
+            width: 180px;
+            height: 60px;
+
+            text-align: center;
+            padding: 12px;
+            font-size: 24px;
+
+            background-color: rgb(0, 247, 103);
+            border: 1px solid black;
+
+            top: 260px;
+            left: 600px;
+        }
+        #plus{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+
+            text-align: center;
+            padding: 0px;
+            font-size: 42px;
+
+            background-color: rgb(0, 247, 103);
+            border: 1px solid black;
+
+            top: 260px;
+            left: 810px;
+        }
+
+        #minus{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+
+            text-align: center;
+            padding: 0px;
+            font-size: 42px;
+            background-color: rgb(0, 247, 103);
+            border: 1px solid black;
+
+            top: 305px;
+            left: 810px;
+        }
+
+        #turns{
+            position: absolute;
+            width: 180px;
+            height: 70px;
+
+            text-align: center;
+            padding: 10px;
+            font-size: 34px;
+
+            background-color: rgb(228, 222, 222);
+            border: 1px solid black;
+            display: none;
+
+            top: 20px;
+            left: 600px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <img src="images/background.jpg"
+    class="image">
+    <img src="images/whitePawn.png"
+    class="image">
+    <img src="images/whiteRook.png"
+    class="image">
+    <img src="images/whiteKnight.png"
+    class="image">
+    <img src="images/whiteBishop.png"
+    class="image">
+    <img src="images/whiteKing.png"
+    class="image">
+    <img src="images/whiteQueen.jpg"
+    class="image">
+
+    <img src="images/blackPawn.png"
+    class="image">
+    <img src="images/blackKnight.png"
+    class="image">
+    <img src="images/blackRook.png"
+    class="image">
+    <img src="images/blackBishop.png"
+    class="image">
+    <img src="images/blackKing.png"
+    class="image">
+    <img src="images/blackQueen.png"
+    class="image">
+
+    <div id="start" onclick="start()">START</div>
+    <div id="color" onclick="changeColor()">CHANGE COLOR</div>
+    <div id="moves">MOVES SEEN AHEAD 3</div>
+    <div id="plus" onclick="changeMoves(1)">+</div>
+    <div id="minus" onclick="changeMoves(-1)">-</div>
+
+    <div id="turns">YOUR TURN</div>
+
+    <canvas id="canvas"></canvas>
+    <script src="game.js"></script>
+    <script src="menu.js"></script>
+    <script src="ai.js"></script>
+    <script src="animation.js"></script>
+</body>
+</html>
