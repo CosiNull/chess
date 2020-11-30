@@ -159,7 +159,7 @@ function aiTurn() {
             oriRoqueCheck
           );
           if (!checkIfKingNotEndangered(newTestBoard, newRoqueStats, ai)) {
-            console.log("g");
+            
             continue; //
             console.log(1);
           }
