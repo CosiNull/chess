@@ -158,6 +158,8 @@ function aiTurn() {
             board[i][j],
             oriRoqueCheck
           );
+          if (!checkIfKingNotEndangered(newTestBoard, newRoqueStats, ai))
+          continue; //
           let score = minimax(
             newTestBoard,
             newRoqueStats,
