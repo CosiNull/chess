@@ -33,7 +33,7 @@ function start() {
 }
 
 function changeMoves(num) {
-  if (num < 0 && movesSeenAhead == 1) {
+  if ((num < 0 && movesSeenAhead == 1)||(num>0&&movesSeenAhead == 3)) {
   } else {
     movesSeenAhead += num;
   }
