@@ -1,4 +1,4 @@
-let movesSeenAhead = 3;
+let movesSeenAhead = 2;
 let showTurns = document.getElementById("turns");
 
 function changeColor() {
