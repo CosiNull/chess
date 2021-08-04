@@ -203,9 +203,9 @@ function minimax(tBoard, roqueStats, depth, alpha, beta, isMaximizing) {
   let gameState = checkmatePlayer(tBoard, roqueStats);
 
   if (locateKing(player, tBoard) == 0 || gameState == "checkmate") {
-    return Infinity;
+    return Number.MAX_VALUE;
   } else if (locateKing(ai, tBoard) == 0) {
-    return -Infinity;
+    return -Number.MAX_VALUE;
   } else if (gameState == "tie") {
     return 0;
   } else if (depth == 0) {
