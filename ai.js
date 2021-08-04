@@ -295,3 +295,5 @@ function minimax(tBoard, roqueStats, depth, alpha, beta, isMaximizing) {
     return bestValue;
   }
 }
+
+console.log("update 1")
