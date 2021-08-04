@@ -184,7 +184,16 @@ function aiTurn() {
       }
     }
   }
-
+  if (bestScore = -Infinity){
+      let gameState = checkmatePlayer(board, oriRoqueCheck);
+      if (gameState == "checkmate" || gameState == "tie") {
+          alert(gameState);
+          mode = "gameOver";
+          showTurns.innerHTML = "YOUR TURN";
+          turn = "player1";
+          return
+      }
+  }
   //move the piece
   updateMovementGamePiece(
     bestMove.iniRow,
@@ -194,7 +203,6 @@ function aiTurn() {
   );
 
   showTurns.innerHTML = "YOUR TURN";
-
   turn = "player1";
 }
 function minimax(tBoard, roqueStats, depth, alpha, beta, isMaximizing) {
